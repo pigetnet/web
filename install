@@ -1,0 +1,4 @@
+#!/bin/bash
+/pi/install webcontrols
+/pi/intall nginx
+/do/nginx/dir /do/web/www/new
