@@ -7,7 +7,7 @@ function button($text,$command,$color="btn-default",$state="",$interval="1000"){
 		$tocheck = "tocheck";
 	}
 	echo '
-	<button onclick=\'send("'.$command.'")\' data-interval="'.$interval.'" data-command="'.$state.'" class="'.$tocheck.' '.$state.' btn btn-'.$color.'" type="button">'.$text.'</button>
+	<button onclick=\'send(this,"'.$command.'")\' data-interval="'.$interval.'" data-locked="0" data-command="'.$command.'" data-state="'.$state.'" class="'.$tocheck.' '.$command.' '.$state.' btn btn-'.$color.'" type="button">'.$text.'</button>
 	';
 }
 

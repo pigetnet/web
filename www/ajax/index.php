@@ -12,7 +12,7 @@ button("","","","sambastate","10000");
 title("Led (pin 21)");
 button("Led ON","ledon","success");
 button("Led OFF","ledoff","danger");
-button("","","","ledstate","3000");
+button("","","","ledstate","1000");
 
 //Footer
 include 'core/footer.php'; //JS;

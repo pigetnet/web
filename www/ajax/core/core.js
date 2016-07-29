@@ -1,11 +1,18 @@
 
 //Send a command to do
-function send(command){
-	command = "do.php?name=" + command
-	$.getJSON(command, function(json){    
-		console.log(json);
-		sendCallback(json);
-	});
+function send(id,command){
+	lock = $(id).attr("data-locked");
+	if(lock == 0){
+		loadingCallback(id);
+		command = "do.php?name=" + command
+		console.log("=====> Sending " + command);
+		$.getJSON(command, function(json){    
+			//console.log(json);
+			sendCallback(json);
+		});
+	}else{
+		console.log("!!! ====> Command "+ command + " already sent");
+	}
 }
 
 //Convert server message to an displayable message
